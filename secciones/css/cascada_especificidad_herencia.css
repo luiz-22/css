@@ -1,0 +1,25 @@
+/* ------------------------- Site Styles ------------------------- */
+code {
+    background-color: #f0f0f4;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+/* ------------------------- Herencia ------------------------- */
+article {
+    color: green;
+}
+          
+.my-class-1 a {
+    color: inherit;
+}
+          
+.my-class-2 a {
+    color: initial;
+}
+          
+.my-class-3 a {
+    color: unset;
+}

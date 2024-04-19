@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="css/selectores.css">
+    <link rel="icon" type="image/x-icon" href="../css.svg" />
+</head>
+
+<body>
+    <h1>Selectores</h1>
+
+    <br><br>
+
+    <section class="container">
+        <!---------------------------------------- Selectores ---------------------------------------->
+        <table>
+            <tr>
+                <th>Selectores</th>
+                <th>Ejemplo</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td><a href="#selector1">.clase1.clase2</a></td>
+                <td>.diario1.diario2</td>
+                <td>Todos los elementos con la clase "diario1" y "diario2"</td>
+            </tr>
+            <tr>
+                <td><a href="#selector2">.clase1 .clase2</a></td>
+                <td>.diario1 .diario2</td>
+                <td>Todos los elementos "diario2" descendientes de "diario1"</td>
+            </tr>
+            <tr>
+                <td><a href="#selector3">elemento.clase</a></td>
+                <td>p.diario</td>
+                <td>Todos los elementos "p" con la clase "diario"</td>
+            </tr>
+            <tr>
+                <td><a href="#selector4">elemento elemento</a></td>
+                <td>div p</td>
+                <td>Todos los elementos "p" descendientes de "div"</td>
+            </tr>
+            <tr>
+                <td><a href="#selector5">elemento > elemento</a></td>
+                <td>article > p</td>
+                <td>Todos los elementos "p" hijos (directo) de "article"</td>
+            </tr>
+            <tr>
+                <td><a href="#selector6">elemento + elemento</a></td>
+                <td>aside + p</td>
+                <td>Primer elemento "p" que se coloca inmediatamente después "aside"</td>
+            </tr>
+            <tr>
+                <td><a href="#selector7">elemento ~ elemento</a></td>
+                <td>article ~ p</td>
+                <td>Cada elemento "p" que preceden a un "article"</td>
+            </tr>
+            <tr>
+                <td><a href="#selector8">[atributo]</a></td>
+                <td>[max]</td>
+                <td>Todos los elementos con el atributo "max"</td>
+            </tr>
+            <tr>
+                <td><a href="#selector9">[atributo=value]</a></td>
+                <td>[target=_blank]</td>
+                <td>Todos los elementos con "target=_blank"</td>
+            </tr>
+            <tr>
+                <td><a href="#selector10">[atributo~=value]</a></td>
+                <td>[title~=flores]</td>
+                <td>Todos los elementos con el atributo "title", que contenga "flores" separado con espacios</td>
+            </tr>
+            <tr>
+                <td><a href="#selector11">[atributo|=value]</a></td>
+                <td>[class|=top]</td>
+                <td>Todos los elementos con el atributo "class" y que empiecen con "top-"</td>
+            </tr>
+
+
+            <tr>
+                <td><a href="#selector12">[atributo^=value]</a></td>
+                <td>a[href^="https://mar"]</td>
+                <td>Todos los elementos "a", que el atributo "href" empiece con "https://mar"</td>
+            </tr>
+            <tr>
+                <td><a href="#selector13">[atributo$=value]</a></td>
+                <td>a[href$=".com.ar"]</td>
+                <td>Todos los elementos "a", que el atributo "href" termine con ".com.ar"</td>
+            </tr>
+            <tr>
+                <td><a href="#selector14">[atributo*=value]</a></td>
+                <td>a[href*="w3schools"]</td>
+                <td>Todos los elementos "a", que el atributo "href" contenga "w3schools"</td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <!---------------------------------------- Pseudoclases ---------------------------------------->
+        <table>
+            <tr>
+                <th>Pseudoclases</th>
+                <th>Ejemplo</th>
+                <th>Descripción</th>
+            </tr>
+            <tr>
+                <td><a href="#target">:target</a></td>
+                <td>.ventana-modal:target</td>
+                <td>Selecciona el elemento "modal-1" (haciendo clic en una URL que contiene ese nombre de ancla)</td>
+            </tr>
+        </table>
+    </section>
+
+    <br><br>
+
+    
+    <!---------------------------------------- Selectores ---------------------------------------->
+    
+    <section class="container">
+        <h2>Selectores</h2>
+    </section>
+
+    <br>
+
+
+    <!------------------------------ .clase1.clase2 ------------------------------>
+
+    <section id="selector1" class="container">
+        <h3>.clase1.clase2</h3>
+        <p class="diario1 diario2">Marca</p>
+        <p class="diario1">AS</p>
+    </section>
+
+    <br><br>
+
+    <!------------------------------ .clase1 .clase2 ------------------------------>
+
+    <section id="selector2" class="container">
+        <h3>.clase1.clase2</h3>
+        <p class="diario1"><span class="diario2">Marca</span></p>
+        <p class="diario1">AS</p>
+    </section>
+
+    <br><br>
+
+    <!------------------------------ elemento.clase ------------------------------>
+
+    <section id="selector3" class="container">
+        <h3>elemento.clase</h3>
+        <p class="diario">Marca</p>
+        <p>AS</p>
+    </section>
+
+    <br><br>
+
+    <!------------------------------ elemento elemento ------------------------------>
+
+    <section id="selector4" class="container">
+        <h3>elemento elemento</h3>
+        <div>
+            <p>Marca</p>
+            <span>
+                <p>AS</p>
+            </span>
+        </div>
+        <p>Ole</p>
+    </section>
+
+    <br><br>
+
+    <!------------------------------ elemento > elemento ------------------------------>
+
+    <section id="selector5" class="container">
+        <h3>elemento > elemento</h3>
+        <article>
+            <p>Marca</p>
+            <span>
+                <p>AS</p>
+            </span>
+        </article>
+    </section>
+
+    <br><br>
+
+    <!------------------------------ elemento + elemento ------------------------------>
+
+    <section id="selector6" class="container">
+        <h3>elemento + elemento</h3>
+        <aside>
+            <p>Marca</p>
+        </aside>
+        <p>AS</p>
+        <p>Ole</p>
+    </section>
+
+    <br><br>
+
+    <!------------------------------ elemento ~ elemento ------------------------------>
+
+    <section id="selector7" class="container">
+        <h3>elemento ~ elemento</h3>
+        <p>Marca</p>
+        <article>AS</article>
+        <p>Ole</p>
+        <p>Sport</p>
+    </section>
+
+    <br><br>
+
+    <!------------------------------ [atributo] ------------------------------>
+
+    <section id="selector8" class="container">
+        <h3>[atributo]</h3>
+        <br>
+        <progress value="71" max="100">Completado</progress><br>
+    </section>
+    <br><br>
+
+    <!------------------------------ [atributo=value] ------------------------------>
+
+    <section id="selector9" class="container">
+        <h3>[atributo=value]</h3>
+        <br>
+        <a href="https://www.google.com" target="_blank">Google</a>
+        <br>
+        <a href="https://www.google.com">Google</a>
+    </section>
+    <br><br>
+
+    <!------------------------------ [atributo~=value] ------------------------------>
+
+    <section id="selector10" class="container">
+        <h3>[atributo~=value]</h3>
+        <p title="Las flores">Margarita</p>
+        <p title="flowers">Violeta</p>
+    </section>
+    <br><br>
+
+    <!------------------------------ [atributo|=value] ------------------------------>
+
+    <section id="selector11" class="container">
+        <h3>[atributo|=value]</h3>
+        <p class="top-uno">Rojo</p>
+        <p class="topo">Verde</p>
+    </section>
+    <br><br>
+
+    <!------------------------------ [atributo^=value] ------------------------------>
+
+    <section id="selector11" class="container">
+        <h3>[atributo^=value]</h3>
+        <br>
+        <a href="https://www.marca.com">Marca</a>
+        <br>
+        <a href="https://www.as.com">AS</a>
+    </section>
+    <br><br>
+
+    <!------------------------------ [atributo$=value] ------------------------------>
+
+    <section id="selector12" class="container">
+        <h3>[atributo$=value]</h3>
+        <br>
+        <a href="https://www.ole.com.ar">Ole</a>
+        <br>
+        <a href="https://www.as.com">AS</a>
+    </section>
+    <br><br>
+
+    <!------------------------------ [atributo*=value] ------------------------------>
+
+    <section id="selector13" class="container">
+        <h3>[atributo*=value]</h3>
+        <br>
+        <a href="https://www.w3schools.com/default.asp">w3schools</a>
+        <br>
+        <a href="https://developer.mozilla.org/es/">mozilla</a>
+    </section>
+    <br><br>
+
+
+
+    <!---------------------------------------- Pseudoclases ---------------------------------------->
+
+    <section class="container">
+        <h2>Pseudoclases</h2>
+    </section>
+
+    <br>
+
+    <!------------------------------ :target------------------------------>
+
+    <section id="target" class="container">
+        <h3>:target</h3>
+        <br>
+        <a href="#modal-1">Abrir ventana modal</a>
+    </section>
+    
+    <article id="modal-1" class="ventana-modal">
+        <a href="#cerrar">Cerrar ventana</a> <!-- Pongo un id que no exista, al no tener el target, vuelve a display: none -->
+    </article>
+    
+    <br><br>
+
+</body>
+
+</html>

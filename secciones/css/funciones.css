@@ -1,0 +1,35 @@
+/* ------------------------------ calc() ------------------------------ */
+.calc {
+    background-color: darkgrey;
+    height: 200px;
+    width: calc(50% + 30px)
+}
+
+/* ------------------------------ clamp() ------------------------------ */
+.clamp {
+    background-color: darkseagreen;
+    height: 200px;
+    width: clamp(200px, 600px, 60%);
+    /* clamp(mínimo, valor_deseado, máximo); */
+}
+
+/* ------------------------------ max() ------------------------------ */
+.max {
+    background-color: gold;
+    height: 200px;
+    width: max(50%, 400px);
+}
+
+/* ------------------------------ max() ------------------------------ */
+.min {
+    background-color: cornflowerblue;
+    height: 200px;
+    width: min(50%, 400px);
+}
+
+/* ------------------------------ url() ------------------------------ */
+.url{
+    background-image: url('../assets/especificidad.png');
+    width: 640px;
+    height: 445px;
+}

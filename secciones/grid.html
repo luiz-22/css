@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/grid.css" />
+    <link rel="icon" type="image/x-icon" href="../css.svg" />
+    <title>Grid</title>
+  </head>
+
+  <body data-dark-mode>
+    <h1>Grid</h1>
+
+    <section class="container">
+      <h2>Propiedades del padre</h2>
+      <ul>
+        <li><a href="#display">display</a></li>
+        <li>
+          <a href="#grid-template-columns/rows"
+            >grid-template-columns / grid-template-rows</a
+          >
+        </li>
+        <li><a href="#grid-template-areas">grid-template-areas</a></li>
+        <li><a href="#gap">column-gap / row-gap / gap</a></li>
+        <li>
+          <a href="#flow"
+            >grid-auto-flow / grid-auto-rows / grid-auto-columns</a
+          >
+        </li>
+        <li><a href="#align">justify-items / align-items</a></li>
+        <li><a href="#align-track">justify-content / align-content</a></li>
+      </ul>
+      <br />
+      <h2>Propiedades de los hijos</h2>
+      <ul>
+        <li>
+          <a href="#grid-start-end"
+            >grid-column-start / grid-column-end / grid-column / grid-row-start
+            /grid-row-end / grid-row / grid-area</a
+          >
+        </li>
+        <li><a href="#order">order</a></li>
+        <li><a href="#align2">justify-self / align-self</a></li>
+      </ul>
+      <br />
+      <h2>Otros</h2>
+      <ul>
+        <li><a href="#minmax">minmax (función)</a></li>
+        <li><a href="#diamic">Grid dinámica</a></li>
+        <li><a href="#responsive">Grid responsive</a></li>
+      </ul>
+    </section>
+
+    <!---------------------- Propiedades del padre ---------------------->
+    <section class="container">
+      <h2>Propiedades del padre</h2>
+    </section>
+
+    <section id="display" class="section container">
+      <h3 class="section-title">display</h3>
+      <article>
+        <p>
+          Esto define un contenedor de cuadrícula; en línea o en bloque según el
+          valor dado. Establece un contexto de cuadricula para todos sus hijos
+          directos.
+        </p>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid; /* or inline-grid */ 
+}           </code>
+            </pre>
+      </article>
+    </section>
+
+    <section id="grid-template-columns/rows" class="section container">
+      <h3 class="section-title">
+        grid-template-columns<br />grid-template-rows
+      </h3>
+      <article>
+        <p>
+          <b>Grid explicita</b><br />1fr: una fracción es el espacio sobrante
+        </p>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 100px 1fr;
+  grid-template-rows: 30% 100px 1fr;
+}           </code>
+            </pre>
+      </article>
+      <div class="grid-container-explicit1">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+
+      <div class="separador"></div>
+      <div class="separador"></div>
+
+      <article>
+        <p><b>Grid explicita</b></p>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  grid-template-rows: repeat(3, auto);
+}           </code>
+            </pre>
+      </article>
+      <div class="grid-container-explicit2">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ea
+          facere pariatur doloremque eum.
+        </article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+
+      <div class="separador"></div>
+      <div class="separador"></div>
+
+      <article>
+        <p><b>Grid explicita</b></p>
+        <pre id="code" class="language-css">
+        <code>
+.grid-container {
+display: grid;
+grid-template-columns: repeat(3, 33.33%);
+grid-template-rows: repeat(3, 33.33%);
+}           </code>
+        </pre>
+      </article>
+      <div class="grid-container-explicit3">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ea
+          facere pariatur doloremque eum.
+        </article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+
+      <div class="separador"></div>
+      <div class="separador"></div>
+
+      <article>
+        <p><b>Grid con nombres de línea</b></p>
+        <pre id="code" class="language-css">
+        <code>
+.grid-container {
+display: grid;
+grid-template-columns: [linea-c1] 1fr [linea-c2] 1fr [linea-c3] 1fr [linea-c4];
+grid-template-rows: [linea-r1] 1fr [linea-r2] 1fr [linea-r3] 1fr [linea-r4];
+}       
+
+.grid-container .item:nth-child(3) {
+  grid-row: linea-r3 / linea-r4;
+  grid-column: linea-c1 / linea-c4;
+}       </code>
+        </pre>
+      </article>
+      <div class="grid-container-name-line">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+
+      <div class="separador"></div>
+      <div class="separador"></div>
+
+      <article>
+        <p><b>Grid implicita</b></p>
+        <p>
+          Los elementos en filas que se vayan generando después de la grid
+          explicita que hayamos definido, van a tomar el valor automático.
+        </p>
+        <pre id="code" class="language-css">
+        <code>
+.grid-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 100px);
+}       </code>
+        </pre>
+      </article>
+      <div class="grid-container-implicit">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ea
+          facere pariatur doloremque eum.
+        </article>
+        <article class="items">10</article>
+        <article class="items">11</article>
+        <article class="items">12</article>
+      </div>
+    </section>
+
+    <section id="grid-template-areas" class="section container">
+      <h3 class="section-title">grid-template-areas</h3>
+      <article>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container-areas {
+  background-color: #3a63f0;
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  grid-template-rows: 50px repeat(2, 1fr) 30px;
+  grid-template-areas:
+    "header   header"
+    "content  sidebar"
+    "content  ."
+    "footer   footer";
+}
+                  
+.header { grid-area: header; }              
+.content { grid-area: content; }
+.sidebar { grid-area: sidebar; }
+.footer { grid-area: footer; }</code>
+            </pre>
+      </article>
+      <div class="grid-container-areas">
+        <article class="items header">Header</article>
+        <article class="items content">Content</article>
+        <article class="items sidebar">Sidebar</article>
+        <article class="items footer">Footer</article>
+      </div>
+    </section>
+
+    <section id="gap" class="section container">
+      <h3 class="section-title">column-gap<br />row-gap<br />gap</h3>
+      <article>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  /* gap: 1rem 1rem; */
+}           </code>
+            </pre>
+      </article>
+      <div class="grid-container-gap">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+    </section>
+
+    <section id="flow" class="section container">
+      <h3 class="section-title">
+        grid-auto-flow<br />grid-auto-rows<br />grid-auto-columns
+      </h3>
+      <article>
+        <p>
+          <b>Flujo de la grid</b><br />Define el tamaño de los elementos no
+          definidos en la grid explicita.
+        </p>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 40px;
+  /* grid-auto-flow: column;
+  grid-auto-columns: 100px; */
+  grid-auto-flow: row;
+  grid-auto-rows: 80px;
+}           </code>
+            </pre>
+      </article>
+      <div class="grid-container-flow">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+
+      <div class="separador"></div>
+      <div class="separador"></div>
+
+      <article>
+        <p>
+          <b>Flujo denso de la grid</b><br />dense: rellena los huecos de la
+          cuadricula si aparecen elementos mas pequeños después.
+        </p>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 50px);
+  grid-auto-flow: row dense;
+}           
+
+.grid-container .item:nth-child(3) {
+  grid-row: span 3;
+  grid-column: span 3;
+}       
+
+.grid-container .item:nth-child(3) {
+    grid-row: span 2;
+    grid-column: span 2;
+}       </code>
+        </pre>
+      </article>
+      <div class="grid-container-flow-dense">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+    </section>
+
+    <section id="align" class="section container">
+      <h3 class="section-title">justify-items<br />align-items</h3>
+      <article>
+        <p>
+          Alinea los elemento, respecto de su celda.<br />justify-items: alinea
+          los elementos en el eje horizontal (X).<br />align-items: alinea los
+          elementos en el eje vertical (Y).
+        </p>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  justify-items: center; /* start | end | center | stretch */
+  align-items: start; /* start | end | center | stretch; */
+}           </code>
+            </pre>
+      </article>
+      <div class="grid-container-align">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+    </section>
+
+    <section id="align-track" class="section container">
+      <h3 class="section-title">justify-content<br />align-content</h3>
+      <article>
+        <p>
+          justify-content: alinea los tracks de la grid en el eje horizontal
+          (X),<br />align-content: alinea los tracks de la grid en el eje
+          vertical (Y).
+        </p>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(3, 50px);
+  justify-content: space-around; /* start | end | center | stretch | space-around | space-between | space-evenly */
+  align-content: space-between; /* start | end | center | stretch | space-around | space-between | space-evenly */  
+}           </code>
+            </pre>
+      </article>
+      <div class="grid-container-align-track">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+    </section>
+
+    <!---------------------- Propiedades de los hijos ---------------------->
+
+    <section class="container">
+      <h2>Propiedades de los hijos</h2>
+    </section>
+
+    <section id="grid-start-end" class="section container">
+      <h3 class="section-title">
+        grid-column-start<br />grid-column-end<br />grid-column<br />grid-row-start<br />grid-row-end<br />grid-row<br />grid-area
+      </h3>
+      <article>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}           
+
+.grid-container .item:nth-child(11) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3; 
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  /* grid-area: grid-row-start / grid-row-end / grid-column-start / grid-column-end; */
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+.grid-container .item:nth-child(7) {
+  grid-row: span 2;
+}
+
+.grid-container .item:nth-child(13) {
+  grid-column: span 2;
+}           </code>
+            </pre>
+      </article>
+      <div class="grid-container-start-end">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+        <article class="items">10</article>
+        <article class="items">11</article>
+        <article class="items">12</article>
+        <article class="items">13</article>
+        <article class="items">14</article>
+        <article class="items">15</article>
+        <article class="items">16</article>
+      </div>
+    </section>
+
+    <section id="order" class="section container">
+      <h3 class="section-title">order</h3>
+      <article>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-container .item:nth-child(5) { order: -2; }
+.grid-container .item:nth-child(2) { order: 3; }
+.grid-container .item:nth-child(4) { order: 2; }</code>
+            </pre>
+      </article>
+      <div class="grid-container-order">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+    </section>
+
+    <section id="align2" class="section container">
+      <h3 class="section-title">justify-self<br />align-self</h3>
+      <article>
+        <p>
+          Alinea los elemento, respecto de su celda. Se puede aplicar a un
+          elemento en particular.<br />justify-self: alinea los elementos en el
+          eje horizontal (X).<br />align-self: alinea los elementos en el eje
+          vertical (Y).
+        </p>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: repeat(3, 70px);
+  justify-items: center; /* start | end | center | stretch */
+  align-items: start; /* start | end | center | stretch; */
+}
+
+.grid-container .item:nth-child(4) {
+  justify-self: start;
+  align-self: end;
+}       </code>
+        </pre>
+      </article>
+      <div class="grid-container-align2">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+    </section>
+
+    <!---------------------- Otros ---------------------->
+
+    <section class="container">
+      <h2>Otros</h2>
+    </section>
+
+    <section id="minmax" class="section container">
+      <h3 class="section-title">minmax (función)</h3>
+      <article>
+        <p>
+          Define un valor mínimo y un valor máximo para los elementos de la
+          grid.
+        </p>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  /* grid-template-columns: repeat(4, minmax(min-content, 200px)); */
+  /* grid-template-columns: repeat(4, minmax(50px, max-content)); */
+  grid-template-columns: repeat(4, minmax(min-content, max-content)); 
+}           </code>
+            </pre>
+      </article>
+      <div class="grid-container-minmax">
+        <article class="items">grid item 1</article>
+        <article class="items">grid item 2</article>
+        <article class="items">grid item 3</article>
+        <article class="items">grid item 4</article>
+        <article class="items">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ea
+          facere pariatur doloremque eum.
+        </article>
+        <article class="items">grid item 6</article>
+        <article class="items">grid item 7</article>
+        <article class="items">grid item 8</article>
+        <article class="items">grid item 9</article>
+      </div>
+    </section>
+
+    <section id="dinamic" class="section container">
+      <h3 class="section-title">Grid dinámica</h3>
+      <article>
+        <p>
+          auto-fill: rellena la grid con tracks generados dinámicamente.<br />auto-fit:
+          ajusta la grid con los tracks existentes.<br />En auto-fill, pueden
+          quedar celdas vacias, en auto-fit, no.
+        </p>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  /* grid-template-columns: repeat(auto-fit, 100px); */ 
+}           </code>
+            </pre>
+      </article>
+      <div class="grid-container-dinamic">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+      </div>
+    </section>
+
+    <section id="responsive" class="section container">
+      <h3 class="section-title">Grid responsive</h3>
+      <article>
+        <p>
+          auto-fit: dice que se van a repetir tantas columnas como lo necesite
+        </p>
+        <pre id="code" class="language-css">
+            <code>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}           </code>
+            </pre>
+      </article>
+      <div class="grid-container-responsive">
+        <article class="items">1</article>
+        <article class="items">2</article>
+        <article class="items">3</article>
+        <article class="items">4</article>
+        <article class="items">5</article>
+        <article class="items">6</article>
+        <article class="items">7</article>
+        <article class="items">8</article>
+        <article class="items">9</article>
+      </div>
+    </section>
+
+    <article class="arrow-up">
+      <i class="fas fa-chevron-circle-up"></i>
+    </article>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+/* ------------------------- Site Styles ------------------------- */
+a {
+  color: #0000ee;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+/* ---------------------------------------- Selectores ---------------------------------------- */
+
+/* ------------------------------ .clase1.clase2 ------------------------------ */
+.diario1.diario2 {
+  background-color: lightblue;
+}
+
+/* ------------------------------ .clase1 .clase2 ------------------------------ */
+.diario1 .diario2 {
+  background-color: lightblue;
+}
+
+/* ------------------------------ elemento.clase ------------------------------ */
+p.diario {
+  background-color: lightblue;
+}
+
+/* ------------------------------ elemento elemento ------------------------------ */
+div p {
+  background-color: lightblue;
+}
+
+/* ------------------------------ elemento > elemento ------------------------------ */
+article > p {
+  background-color: lightblue;
+}
+
+/* ------------------------------ elemento + elemento ------------------------------ */
+aside + p {
+  background-color: lightblue;
+}
+
+/* ------------------------------ elemento ~ elemento ------------------------------ */
+article ~ p {
+  background-color: lightblue;
+}
+
+/* ------------------------------ [atributo] ------------------------------ */
+[max] {
+  height: 20px;
+}
+
+/* ------------------------------ [atributo=value] ------------------------------ */
+[target="_blank"] {
+  color: red;
+}
+
+/* ------------------------------ [atributo~=value] ------------------------------ */
+[title~="flores"] {
+  color: blue;
+}
+
+/* ------------------------------ [atributo|=value] ------------------------------ */
+[class|="top"] {
+  color: red;
+}
+
+/* ------------------------------ [atributo^=value] ------------------------------ */
+a[href^="https://www.mar"]
+{
+  color: red;
+}
+
+/* ------------------------------ [atributo$=value] ------------------------------ */
+a[href$=".com.ar"] {
+  color: green;
+}
+
+/* ------------------------------ [atributo*=value] ------------------------------ */
+a[href*="w3schools"] {
+  color: darkgreen;
+}
+
+/* ---------------------------------------- Pseudoclases ---------------------------------------- */
+
+/* ------------------------------ :target ------------------------------ */
+
+.ventana-modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: #00000090;
+  display: none;
+}
+
+.ventana-modal a {
+  color: #fff;
+}
+
+.ventana-modal:target {
+  display: block;
+}

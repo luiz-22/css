@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascada - Especificidad - Herencia</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="css/cascada_especificidad_herencia.css">
+    <link rel="icon" type="image/x-icon" href="../css.svg" />
+</head>
+
+<body>
+    <h1>Cascada - Especificidad - Herencia</h1>
+
+    <br>
+
+    <section class="container">
+        
+        <h3>Cascada</h3>
+        <br>
+        <img src="assets/cascada.jpg" alt="cascada">
+        <br><br><br>
+
+        <h3>Especificidad</h3>
+        <br>
+        <img src="assets/especificidad.png" alt="cascada">
+        <br><br><br>
+
+        <h3>Herencia</h3>
+        <p><b>inherit</b></p>
+        <p>Establece que el valor de la propiedad que se aplica a un elemento determinado sea exactamente igual al del
+            elemento padre. En la práctica, esto "activa la herencia".</p>
+        <p><b>initial</b></p>
+        <p>Establece que el valor de la propiedad que se aplica a un elemento seleccionado tenga el mismo valor que esté
+            establecido para esa propiedad en la hoja de estilo por defecto del navegador.</p>
+        <p><b>unset</b></p>
+        <p>Restablece la propiedad a su valor natural, lo que significa que si la propiedad se hereda de forma natural,
+            actúa como <code>inherit</code>, y en caso contrario como <code>initial</code> .</p>
+
+        <!------------------------------ herencia ------------------------------>
+        <p><b>Ejemplo</b></p>
+        <article>
+            <ul>
+                <li>Default <a href="#">link</a> color</li>
+                <li class="my-class-1">Inherit the <a href="#">link</a> color</li>
+                <li class="my-class-2">Reset the <a href="#">link</a> color</li>
+                <li class="my-class-3">Unset the <a href="#">link</a> color</li>
+            </ul>
+        </article>
+
+
+        <p><b>Propiedades que son heredadas</b></p>
+
+        <ul>
+            <li>border-collapse</li>
+            <li>border-spacing</li>
+            <li>caption-side</li>
+            <li>color</li>
+            <li>cursor</li>
+            <li>direction</li>
+            <li>empty-cells</li>
+            <li>font-family</li>
+            <li>font-size</li>
+            <li>font-style</li>
+            <li>font-variant</li>
+            <li>font-weight</li>
+            <li>font-size-adjust</li>
+            <li>font-stretch</li>
+            <li>font</li>
+            <li>letter-spacing</li>
+            <li>line-height</li>
+            <li>list-style-image</li>
+            <li>list-style-position</li>
+            <li>list-style-type</li>
+            <li>list-style</li>
+            <li>orphans</li>
+            <li>quotes</li>
+            <li>tab-size</li>
+            <li>text-align</li>
+            <li>text-align-last</li>
+            <li>text-decoration-color</li>
+            <li>text-indent</li>
+            <li>text-justify</li>
+            <li>text-shadow</li>
+            <li>text-transform</li>
+            <li>visibility</li>
+            <li>white-space</li>
+            <li>widows</li>
+            <li>word-break</li>
+            <li>word-spacing</li>
+            <li>word-wrap</li>
+        </ul>
+
+    </section>
+
+</body>
+
+</html>

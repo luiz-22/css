@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamiento</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="css/posicionamiento.css">
+    <link rel="icon" type="image/x-icon" href="../css.svg" />
+</head>
+
+<body>
+
+    <h1>Posicionamiento</h1>
+
+    <br><br>
+
+    <div class="sticky"><b>sticky:</b> es un híbrido de posicionamiento relativo y fijo. El elemento se trata con una
+        posición relativa hasta que cruza un umbral especificado, momento en el que se trata con una posición fija.
+        <br><br>
+        <code>
+            position: sticky;
+            <br>
+            top: 0;
+        </code>
+    </div>
+
+    <div class="static"><b>static:</b> valor por defecto, significa que el elemento respeta el flujo del documento
+        HTML, por lo que no se puede mover ni posicionar, top y left no funcionan.
+        <br><br>
+        <code>
+            position: static;
+            <br>
+            top: 2rem;
+            <br>
+            left: 2rem;
+        </code>
+    </div>
+
+    <div class="relative"><b>relative:</b> el elemento conserva su posición original en el flujo del documento. Si se
+        mueve toma como referencia su posición original.
+        <br><br>
+        <code>
+            position: relative;
+            <br>
+            top: 4rem;
+            <br>
+            left: 2.5rem;
+        </code>
+    </div>
+
+    <div class="absolute"><b>absolute:</b> el elemento pierde su posición original en el flujo del documento. Si se
+        mueve
+        puede tomar como referencia:
+        <br>
+        1) El primer ancestro con posicionamiento relativo
+        <br>
+        2) Si no encuentra un ancestro relativo, se mueve respecto del documento HTML
+        <br><br>
+        <code>
+            position: absolute;
+            <br>
+            right: 3rem;
+            <br>
+            bottom: 4.5rem;
+        </code>
+    </div>
+
+    <div class="fixed"><b>fixed:</b> el elemento pierde su posición original. Si se mueve, toma como referencia el
+        documento HTML, si se hace scroll, queda fijo.
+        <br><br>
+        <code>
+            position: fixed;
+            <br>
+            top: 16rem;
+            <br>
+            left: 400px;
+        </code>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>

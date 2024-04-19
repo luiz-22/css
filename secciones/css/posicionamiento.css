@@ -1,0 +1,43 @@
+/* ------------------------- Site Styles -------------------------  */
+div {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.sticky {
+    position: sticky;
+    background-color:aqua;
+    top: 0;
+}
+
+.static {
+    position: static;
+    background-color: limegreen;
+    top: 2rem;
+    left: 2rem;
+}
+
+.relative {
+    position: relative;
+    background-color: mediumorchid;
+    top: 4rem;
+    left: 2.5rem;
+    width: 400px;
+}
+
+.absolute {
+    position: absolute;
+    background-color: #ff6347;
+    right: 3rem;
+    bottom: 4.5rem;
+    width: 500px;
+}
+
+.fixed {
+    position: fixed;
+    background-color: #9fa8a1;
+    width: 400px;
+    height: 120px;
+    top: 16rem;
+    left: 400px;
+}
