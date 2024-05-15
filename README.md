@@ -1,6 +1,8 @@
-<h1 align="center">CSS - Guía básica</h1>
+<h1 align="center">CSS</h1>
 
-## Tabla de contenidos
+Guía básica sobre CSS.
+
+## Temas
 
 - Selectores
 - Cascada - Especificidad - Herencia
