@@ -1,6 +1,6 @@
 <h1 align="center">CSS</h1>
 
-Guía básica de CSS.
+Conceptos básicos de CSS.
 
 ## Temas
 
