@@ -1,6 +1,6 @@
 <h1 align="center">CSS</h1>
 
-Guía básica sobre CSS.
+Guía básica de CSS.
 
 ## Temas
 
@@ -11,3 +11,7 @@ Guía básica sobre CSS.
 - Funciones
 - Flexbox
 - Grid
+
+## Ejecutar
+
+Ejecuta el archivo index.html.
