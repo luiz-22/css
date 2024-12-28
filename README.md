@@ -1,4 +1,4 @@
-<h1 align="center">CSS</h1>
+# CSS
 
 Conceptos básicos de CSS.
 
