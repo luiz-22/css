@@ -1,8 +1,8 @@
-<h1 align="center">CSS</h1>
+# CSS
 
-Guía básica de CSS.
+Conceptos básicos de CSS.
 
-## Temas
+## 📖 Temas
 
 - Selectores
 - Cascada - Especificidad - Herencia
@@ -12,6 +12,6 @@ Guía básica de CSS.
 - Flexbox
 - Grid
 
-## Ejecutar
+## ▶️ Ejecución
 
-Ejecuta el archivo index.html.
+Ejecuta el archivo `index.html`.
